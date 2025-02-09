@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Forecast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+    <style>
+       .weather-card:hover{
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        transition: box-shadow 0.3s ease-in-out;
+       }
+    </style>
+</head>
+
+<body class="bg-blue-100 text-gray-900">
+    <div class="max-w-4xl mx-auto p-6">
+        <!-- header section starts -->
+        <header class="text-center mb-6">
+            <h1 class="text-6xl font-bold">Weather Forecast App</h1>
+            <div class="flex flex-wrap justify-center gap-4 mt-4">
+                <input type="text" id="city-input" placeholder="Enter City Name"
+                    class="p-2 border border-gray-300 rounded-md w-64">
+                <button id="search-btn"
+                    class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-800">Search</button>
+                <button id="current-location-btn"
+                    class="px-4 py-2 bg-green-700 text-white rounded-md hover:bg-green-900 ">Current Location</button>
+                <select id="recent-select" class=" hidden p-2 border border-gray-300 rounded-md">
+                    <option value="" disabled selected>Recently Seached</option>
+                </select>
+            </div>
+
+        </header>
+        <!-- header section ends -->
+         <!-- todays weather Section starts -->
+          <section id="current-weather-card" class="bg-white text-gray-900 rounded-lg shadow-lg p-6 text-center weather-card">
+            <h2 id="city-name" class="text-2xl font-extrabold">Today's Weather - </h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 mt-4">
+                <img src="" alt="Weather Icon" id="weather-icon" class="w-24 h-24">
+                <p id="weather-condition" class="text-lg font-medium"></p>
+                 <div class="flex flex-col text-left">
+                    <p id="temperature" class="font-bold">Temprature : -- °C</p>
+                    <p id="humidity" class="font-bold">Humidity : -- %</p>
+                    <p id="visibility" class="font-bold">Visibility : -- Km</p>
+                    <p id="wind-speed" class="font-bold">Wind Speed : -- Km/h</p>
+                    <p id="wind-direction" class="font-bold">Wind Direction : -- </p>
+                 </div>
+            </div>
+
+          </section>
+         <!-- todays weather Section ends -->
+          <!-- weather in major cities section starts -->
+           <section id="forecast" class="mt-6 text-center">
+            <h2 class="text-4xl font-bold">Weather In Major Cities</h2>
+            <div id="forecast-cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
+                <div class="bg-white text-gray-900 rounded-lg shadow-lg p-4 text-center weather-card">
+                    <h3 class="font-extrabold">City Name</h3>
+                    <img src="" alt="Weather Icon" class="w-16 h-16 mx-auto">
+                    <p class="font-bold">Condition: --</p>
+                    <p class="font-bold">Temprature: -- °C</p>
+                    <p class="font-bold">Humidity : -- %</p>
+                    <p class="font-bold">Visibility : -- Km</p>
+                    <p class="font-bold">Wind Speed : -- Km/h</p>
+                    <p class="font-bold">Wind Direction : -- </p>
+                </div>
+            </div>
+
+           </section>
+          <!-- weather in major cities section ends -->
+    </div>
+</body>
+</html>
+
+
+<!--  github link -->
+  
